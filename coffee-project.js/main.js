@@ -42,11 +42,11 @@ function coffeeSearch() {
             console.log(searchArr);
         }
     });
+    tbody.innerHTML = renderCoffees(searchArr);
 }
 
-function showCoffee(){
-    dispatchEvent()
-}
+
+
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
@@ -69,9 +69,11 @@ var coffees = [
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
-var coffeeSelect = document.querySelector('#input-coffee-name');
+// var coffeeSelect = document.querySelector('#input-coffee-name');
+var userCoffeeInput = document.querySelector('#input-coffee-name');
 
-coffeeSelect.addEventListener('input', coffeeSearch);
+userCoffeeInput.addEventListener('input', coffeeSearch);
+// coffeeSelect.addEventListener('input', coffeeSearch);
 
 tbody.innerHTML = renderCoffees(coffees);
 
