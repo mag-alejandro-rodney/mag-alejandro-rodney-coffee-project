@@ -43,7 +43,7 @@ function coffeeSearch() {
     var inputCoffee = coffeeSelect.value;
 
     coffees.forEach(function (coffee) {
-        if (coffee.name.includes(inputCoffee)) {
+        if (coffee.name.toLowerCase().includes(inputCoffee.toLowerCase())) {
             searchArr.push(coffee);
             console.log(searchArr);
         }
