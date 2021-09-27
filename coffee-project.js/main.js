@@ -18,6 +18,7 @@ function renderCoffees(coffees) {
     return html;
 }
 
+// Roast selector
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
@@ -36,6 +37,7 @@ function updateCoffees(e) {
     }
 }
 
+// Typing coffee names and getting results from array
 function coffeeSearch() {
     var searchArr = [];
     var coffeeSelect = document.getElementById('input-coffee-name');
@@ -49,6 +51,25 @@ function coffeeSearch() {
         }
     });
     tbody.innerHTML = renderCoffees(searchArr);
+}
+
+// Adding a new coffee with roast and coffee name after typed and submitted
+
+function addNewCoffee(coffee) {
+
+    // console.log(name of coffee)
+    // console.log(roastSelection2)
+    // coffees.length + 1
+    // save to object and push into coffees array
+    //log coffees array
+
+    var selection = roastSelection2.value;
+    var newCoffee = document.getElementById('Add-coffee').value;
+    coffees.push({id: (coffees.length + 1), name: newCoffee, roast: selection});
+    console.log(newCoffee);
+
+    tbody.innerHTML = renderCoffees(coffees);
+
 }
 
 
@@ -75,6 +96,8 @@ var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 // var coffeeSelect = document.querySelector('#input-coffee-name');
 var userCoffeeInput = document.querySelector('#input-coffee-name');
+var roastSelection2 = document.querySelector('#add-selection');
+var submitButton2 = document.querySelector('#submit-coffee');
 
 userCoffeeInput.addEventListener('input', coffeeSearch);
 // coffeeSelect.addEventListener('input', coffeeSearch);
@@ -82,3 +105,4 @@ userCoffeeInput.addEventListener('input', coffeeSearch);
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+submitButton2.addEventListener('click', addNewCoffee);
