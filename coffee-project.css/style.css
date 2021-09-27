@@ -13,7 +13,7 @@ td, th {
 }
 
 hr {
-    background-color: #93593f;
+    background-color: sandybrown;
     width: 80%
 }
 
@@ -21,10 +21,10 @@ hr {
     background-image: url("../img/coffee-project.jpeg");
 }
 
-.jumbotron2 {
-    background-image: url("../img/download.jpeg")
-    /*background: linear-gradient(white, #93593f, white);*/
-}
+/*.jumbotron2 {*/
+/*    background-image: url("../img/download.jpeg")*/
+/*    !*background: linear-gradient(white, #93593f, white);*!*/
+/*}*/
 
 .bg-light {
     opacity: 75%;
@@ -39,4 +39,8 @@ h1 {
 .submit-button{
     color: white;
     background-color: sandybrown;
+}
+
+body {
+    background-image: url("../img/download.jpeg")
 }
