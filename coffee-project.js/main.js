@@ -55,7 +55,7 @@ function coffeeSearch() {
 
 // Adding a new coffee with roast and coffee name after typed and submitted
 
-function addNewCoffee(coffee) {
+function addNewCoffee(e) {
 
     // console.log(name of coffee)
     // console.log(roastSelection2)
@@ -63,12 +63,36 @@ function addNewCoffee(coffee) {
     // save to object and push into coffees array
     //log coffees array
 
+    e.preventDefault();
     var selection = roastSelection2.value;
     var newCoffee = document.getElementById('Add-coffee').value;
-    coffees.push({id: (coffees.length + 1), name: newCoffee, roast: selection});
-    console.log(newCoffee);
+    newCoffee = newCoffee.charAt(0).toUpperCase() + newCoffee.slice(1).toLowerCase();
 
-    tbody.innerHTML = renderCoffees(coffees);
+    // declare var coffeeObject for adding to the array.. because this function is adding a new coffee
+    var coffeeObject = {
+        id: (coffees.length + 1),
+        name: newCoffee,
+        roast: selection
+    }
+
+    // declare var isCoffeeExist for checking if coffee object exists in the array
+    var isCoffeeExist = false;
+
+    // loop through coffees array to check if coffee object exists in coffees array
+    for (var i = 0; i < coffees.length; i++) {
+        if (coffeeObject.name === coffees[i].name && coffeeObject.roast === coffees[i].roast) {
+            isCoffeeExist = true;
+            alert("Hey that coffee is on our list try the search bar above.")
+        }
+
+    }
+    if (isCoffeeExist === false) {
+        coffees.push(coffeeObject);
+        console.log(coffees);
+
+        tbody.innerHTML = renderCoffees(coffees);
+    }
+
 
 }
 
