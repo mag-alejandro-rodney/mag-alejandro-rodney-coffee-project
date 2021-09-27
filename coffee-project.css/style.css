@@ -21,6 +21,11 @@ hr {
     background-image: url("../img/coffee-project.jpeg");
 }
 
+.jumbotron2 {
+    background-image: url("../img/download.jpeg")
+    /*background: linear-gradient(white, #93593f, white);*/
+}
+
 .bg-light {
     opacity: 75%;
 }
