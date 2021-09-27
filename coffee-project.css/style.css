@@ -36,3 +36,7 @@ h1 {
 .container {
     background: linear-gradient(sandybrown, white, sandybrown) ;
 }
+.submit-button{
+    color: white;
+    background-color: sandybrown;
+}
