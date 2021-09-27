@@ -1,4 +1,4 @@
-*{
+* {
     font-family: 'Lobster', cursive;
 }
 
@@ -33,10 +33,12 @@ hr {
 h1 {
     color: #93593f;
 }
+
 .container {
-    background: linear-gradient(sandybrown, white, sandybrown) ;
+    background: linear-gradient(sandybrown, white, sandybrown);
 }
-.submit-button{
+
+.submit-button {
     color: white;
     background-color: sandybrown;
 }
