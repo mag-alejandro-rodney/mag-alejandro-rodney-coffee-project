@@ -23,13 +23,13 @@
 	<!-- Coffee Names-->
 	<div class="container d-flex">
 		<div class="row">
-			<div class="col-6 m-0 " id="coffees">
+			<div class="col-6 mt-5" id="coffees">
 			</div>
 		</div>
 	</div>
 	<!-- Form Coffee Search-->
-	<div class="col-8 d-flex justify-content-end mt-2 p-0">
-		<form>
+	<div class="col-8 d-flex flex-column justify-content-start mt-5 p-0">
+		<form class="first-bar">
 			<label for="roast-selection"></label>
 			<select id="roast-selection">
 				<option>all</option>
@@ -39,14 +39,14 @@
 			</select>
 			<div class="form">
 				<label for="input-coffee-name">Name of Coffee</label>
-				<input class="form-control" id="input-coffee-name" type="text" onkeyup="coffeeSearch()"
+				<input class="form-control search-bar1" id="input-coffee-name" type="text" onkeyup="coffeeSearch()"
 				       placeholder="Search for coffee">
 			</div>
 			<input id="submit" type="submit" class="submit-button mt-2"/>
 		</form>
 		<!--Adding coffee section-->
-		<div class="col-6 d-flex justify-content-end m-0 p-0">
-			<form>
+		<div class="col-8 d-flex flex-column justify-content-around m-0 p-0">
+			<form class="second-bar">
 				<label for="add-selection"></label>
 				<select id="add-selection">
 					<option>light</option>
@@ -55,7 +55,7 @@
 				</select>
 				<div class="form">
 					<label for="Add-coffee">Add Coffee Name</label>
-					<input class="form-control" id="Add-coffee" type="text" onkeyup="addNewCoffee()"
+					<input class="form-control search-bar2" id="Add-coffee" type="text" onkeyup="addNewCoffee()"
 					       placeholder="Add your coffee">
 				</div>
 				<input id="submit-coffee" type="submit" class="submit-button mt-2"/>
