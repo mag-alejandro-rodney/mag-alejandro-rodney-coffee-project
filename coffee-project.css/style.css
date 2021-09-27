@@ -46,3 +46,37 @@ h1 {
 body {
     background-image: url("../img/download.jpeg")
 }
+
+.search-bar1{
+    width: 100%;
+}
+
+.first-bar{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.search-bar2{
+    width: 100%;
+}
+
+.second-bar{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.col-8{
+    max-width: 20em;
+}
+
+.d-flex{
+    display: -ms-flexbox!important;
+    display: flex!important;
+    justify-content: center;
+    /* align-items: center; */
+    margin-bottom: 5em;
+}
